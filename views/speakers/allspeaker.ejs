@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Roux Meetups--Speakers</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+    crossorigin="anonymous">
+  <link rel='stylesheet' href='./css/style.css' />
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+  <%- include('../layout/header.ejs')%>
+  <div class="container" id="speakerList">
+    <div class="row">
+      <div class="col-sm-8">
+        <article class="speakerslist ">
+          <div class="container">
+            <div class="row">
+            <%allSpeakers.forEach((speaker) => {%>
+              <div class="col-sm-8 ">
+                <h3 class="speakerslist-title"><%=speaker.title%></h3>
+                <h5 class="speakerslist-name">with
+                  <a href="/speakers/L<%=speaker.shortname%>"><%=speaker.name%></a>
+                </h5>
+                <p class="speakerslist-info">
+                  <a href="/speakers/<%=speaker.shortname%>">
+                    <img class="speakerslist-img img-circle pull-left" src="./images/speakers/<%=speaker.shortname%>_tn.jpg" alt="Photo of <%=speaker.name%>">
+                  </a>
+                  </a>
+                  </a>
+                  <%=speaker.summary%>
+                </p>
+              </div>
+            <%})%>
+            </div>
+            <!-- row -->
+          </div>
+          <!-- container -->
+        </article>
+      </div>
+      <!-- primary -->
+      <aside class="col-sm-4">
+        <article class="sidebar">
+          <h1 class="sidebar-title">Artwork on display</h1>
+          <p class="sidebar-body">While you attend the conference, head over to our gallery where you can check out some of the work from our speakers.</p>
+          <div class="pixgrid clearfix">
+            <%allArtwork.forEach((speaker,index) => {%>
+                <img src="./images/artwork/<%=speaker%>" alt="Artwork <%=index%>">
+            <%})%>
+
+          </div>
+        </article>
+      </aside>
+      <!-- secondary -->
+    </div>
+  </div>
+  <!-- container -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+    crossorigin="anonymous"></script>
+  <script src="./js/pixgrid.js"></script>
+</body>
+
+</html>

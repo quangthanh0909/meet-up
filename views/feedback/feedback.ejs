@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Roux Meetups--Feedback</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+    crossorigin="anonymous">
+  <link rel='stylesheet' href='./css/style.css' />
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+<%-include('../layout/header.ejs')%>
+  <div class="container" id="feedback">
+    <div class="row">
+      <div class="col-sm-4">
+        <h1 class="feedback-form-title">Send us feedback</h1>
+        <form class="feedback-form">
+          <div class="form-group">
+            <label for="feedback-form-name">Name</label>
+            <input type="text" class="form-control" id="feedback-form-name" placeholder="Enter your name">
+          </div>
+          <div class="form-group">
+            <label for="feedback-form-title">Title</label>
+            <input type="text" class="form-control" id="feedback-form-title" placeholder="Title of your feedback">
+          </div>
+          <div class="form-group">
+            <label for="feedback-form-message">Message</label>
+            <textarea type="text" placeholder="Enter your message, then hit the submit" class="form-control" id="feedback-form-message"
+              rows="6"></textarea>
+          </div>
+          <button type="submit" class="btn btn-default pull-right">Submit</button>
+        </form>
+      </div>
+      <!-- primary -->
+      <aside class="col-sm-8">
+        <div class="maincontent feedback">
+          <h2 class="article-title">Recent Feedback</h2>
+          <div class="feedback-messages">
+            <div class="feedback-item item-list media-list">
+              <div class="feedback-item media">
+                <div class="feedback-info media-body">
+                  <div class="feedback-head">
+                    <div class="feedback-title">Best Meetup Ever <small class="feedback-name label label-info">Awesome</small></div>
+                  </div>
+                  <div class="feedback-message">I really love this meetup. Please don't let it end.</div>
+                </div>
+              </div>
+            </div>
+            <div class="feedback-item item-list media-list">
+              <div class="feedback-item media">
+                <div class="feedback-info media-body">
+                  <div class="feedback-head">
+                    <div class="feedback-title">Meeting Time <small class="feedback-name label label-info">Jane</small></div>
+                  </div>
+                  <div class="feedback-message">Would you consider moving the meeting time 30 minutes to about 6pm. It's tough to make it to the meetings
+                    on time right after work.</div>
+                </div>
+              </div>
+            </div>
+            <div class="feedback-item item-list media-list">
+              <div class="feedback-item media">
+                <div class="feedback-info media-body">
+                  <div class="feedback-head">
+                    <div class="feedback-title">Great Speaker <small class="feedback-name label label-info">Roy</small></div>
+                  </div>
+                  <div class="feedback-message">I really enjoyed the speaker this month. Would love to hear another presentation.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- secondary -->
+    </div>
+  </div>
+  <!-- container -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
